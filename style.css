@@ -22,6 +22,7 @@ body {
   position: absolute;
   top: 15%;
   left: 15%;
+  animation: Left 2s ease-out;
 }
 
 .text {
@@ -34,6 +35,7 @@ body {
 .big-text {
   color: rgba(172, 172, 172, 0.8);
   font-size: 220px;
+  animation: Right 2s ease-out;
 }
 
 .color-text {
@@ -73,20 +75,78 @@ body {
   transform: scale(1.3);
 }
 
-.media{
-    color: #fff;
-    padding: 5px;
-    position: absolute;
-    bottom: 80px;
-    display: flex;
-    flex-direction: column;
+.media {
+  color: #fff;
+  padding: 5px;
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  animation: Right 1s ease-in;
 }
 
-.media-link{
-    margin-top: 10px;
+.media-link {
+  margin-top: 10px;
 }
 
-.media-text{
-    font-size: 18px;
-    margin-left: 5px;
+.media-text {
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+@keyframes Right {
+  0%{
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  90%{
+    transform: translateX(10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes Left {
+  0%{
+    opacity: 1;
+    transform: translateX(150px);
+  }
+  90%{
+    transform: translateX(-10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+.media-link-facebook {
+  transition: all 0.3s;
+}
+
+.media-link-facebook:hover {
+  color: rgba(0, 85, 255, 0.683);
+}
+
+.media-link-instagram {
+  transition: all 0.3s;
+}
+
+.media-link-instagram:hover {
+  color: rgba(255, 0, 47, 0.867)
+}
+
+.media-link-twitter {
+  transition: all 0.3s;
+}
+
+.media-link-twitter:hover {
+  color: rgba(0, 238, 255, 0.842);
 }
